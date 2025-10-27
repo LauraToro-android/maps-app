@@ -1,0 +1,19 @@
+<div #mapContainer style="width:100vw; height:calc(100vh - 64px);">
+</div>
+<hr>
+
+<section id="controls">
+    <h2 class="text-2xl font-bold text-black mb-2">Zoom
+        <small class="text-gray-500 font font-normal">{{zoom() | number: "1.0-1"}}</small>
+    </h2>
+
+    <input type="range" min="1" max="19" [value]="zoom()" 
+    class="range range-info" (input)="zoom.set(+txtZoom.value)" #txtZoom/>
+    <h2 class="text-2xl font-bold text-black mb-2 mt-2">Coordenadas</h2>
+    <pre class="text-sm text-gray-500 font-normal">{{
+            {
+                latitude: coordinates().lat | number: '1.4-4',
+                longitude: coordinates().lng | number: '1.4-4',
+            } | json
+        }}</pre>
+</section>
