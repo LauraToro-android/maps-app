@@ -31,6 +31,6 @@ export class Navbar {
     tap((event) => console.log(event)),
     map((event) => event.url),
     // para que no se vea el slash '/' para poder obtener en el navegador el titulo de la ruta seleccionada.
-    map((url) => routes.find((route) => `/${route.path}` === url)?.title ?? 'Mapas')
+    map((url) => routes.find((route) => `/${route.path}` === url)?.title ?? 'MapsApp')
   );
 }

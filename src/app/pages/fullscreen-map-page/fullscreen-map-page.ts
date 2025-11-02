@@ -33,7 +33,7 @@ export class FullscreenMapPage implements AfterViewInit {
   @ViewChild('mapContainer') mapContainer!: ElementRef<HTMLDivElement>;
   map = signal<maplibregl.Map | null>(null);
 
-  zoom = signal(14);
+  zoom = signal(10);
   coordinates = signal({
     lng: -78,
     lat: 40,
